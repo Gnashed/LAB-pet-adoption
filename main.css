@@ -1,0 +1,63 @@
+* {
+    font-family: Helvetica, Arial, Sans-serif;
+    margin: 10px auto;
+}
+
+
+/* ================ Container and Card Styling ================ */
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgb(211, 208, 208);
+    border-radius: 5px;
+    width: 350px;
+    height: auto;
+}
+
+/* ================ header and footer ================ */
+header {
+    background-color: #e6e6e6;
+    width: 350px;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.animal {
+    background-color: rgb(243, 223, 243);
+    color: rgb(228, 11, 228);
+    width: 350px;
+    margin-bottom: -1px;
+    text-align: center;
+}
+
+/* ================ Image ================ */
+img {
+    border: 5px solid blanchedalmond;
+    border-radius: 8px;
+    width: 250px;
+    height: 250px;
+}
+
+/* ================ Description ================ */
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: -5px 0;
+}
+
+#color {
+    margin-top: -1px;
+}
+
+#skill {
+    margin-top: -4px;
+    margin-bottom: -2px;
+}
