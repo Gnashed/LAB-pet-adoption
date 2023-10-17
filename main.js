@@ -240,3 +240,36 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+// target id #app on DOM
+const app = document.querySelector("#app");
+
+// Check to see if we can get something on the page
+// app.innerHTML = "Hello World";
+
+// Adding information to the card
+app.innerHTML = `<div class="card">
+<header>
+    <h2>Name</h2>
+</header>
+
+<img src="https://loremflickr.com/200/200/cat" alt="placeholder">
+
+<div class="description">
+    <p id="color">Color</p>
+    <p id="skill">
+        Lorem ipsum dolor sit amet, consectetur adispiscing elit, Nulia
+    </p>
+</div> <!-- ./description-->
+
+<div class="animal">
+    <footer>
+        <h4>Cat</h4>
+    </footer>
+</div>
+
+
+</div> <!-- card -->`
+// pets.forEach((element) => {
+//   document.querySelector("#app").innerHTML = `{$element.name}`;
+// });
