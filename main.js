@@ -240,3 +240,42 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+// target id #app on DOM
+const app = document.querySelector("#app");
+
+// Check to see if we can get something on the page
+// app.innerHTML = "Hello World";
+
+// create an empty string to add to later.
+let domString = "";
+
+//loop through object values.
+for(let i = 0; i < pets.length; i++) {
+  // store the html into domString
+  domString += `<div class="card">
+  <header>
+      <h2>${pets[i].name}</h2>
+  </header>
+  
+  <img src="${pets[i].imageUrl}" alt="placeholder">
+  
+  <div class="description">
+      <p id="color">${pets[i].color}</p>
+      <p id="skill">
+          ${pets[i].specialSkill}
+      </p>
+  </div> <!-- ./description-->
+  
+  <div class="animal">
+      <footer>
+          <h4>${pets[i].type}</h4>
+      </footer>
+  </div>
+  
+  
+  </div> <!-- card -->`
+}
+
+// Storing the html to display the app.
+app.innerHTML = domString;
