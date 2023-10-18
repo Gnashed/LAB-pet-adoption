@@ -3,12 +3,70 @@
     margin: 10px auto;
 }
 
+body {
+    background-color: #f3eeee;
+}
+
 
 /* ================ Container and Card Styling ================ */
 
 #app {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* Button styling */
+.filter {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+#cat-filter {
+    background-color: rgb(240, 219, 240);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#cat-filter:hover {
+    background-color: rgb(204, 187, 204);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dog-filter {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+#dog-filter:hover {
+    background-color: rgb(1, 110, 1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dino-filter {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+#dino-filter:hover {
+    background-color: rgb(207, 136, 4);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    height: 40px;
+    margin-right: 60px;
 }
 
 .card {
@@ -18,7 +76,7 @@
     border: 2px solid rgb(211, 208, 208);
     border-radius: 5px;
     width: 350px;
-    height: auto;
+    height: 410px;
 }
 
 /* ================ header and footer ================ */
@@ -27,6 +85,7 @@ header {
     width: 350px;
     margin-top: -1px;
     text-align: center;
+    color: rgb(104, 104, 104);
 }
 
 .animal {
