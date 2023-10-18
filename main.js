@@ -247,29 +247,35 @@ const app = document.querySelector("#app");
 // Check to see if we can get something on the page
 // app.innerHTML = "Hello World";
 
-// Adding information to the card
-app.innerHTML = `<div class="card">
-<header>
-    <h2>Name</h2>
-</header>
+// create an empty string to add to later.
+let domString = "";
 
-<img src="https://loremflickr.com/200/200/cat" alt="placeholder">
+//loop through object values.
+for(let i = 0; i < pets.length; i++) {
+  // store the html into domString
+  domString += `<div class="card">
+  <header>
+      <h2>${pets[i].name}</h2>
+  </header>
+  
+  <img src="${pets[i].imageUrl}" alt="placeholder">
+  
+  <div class="description">
+      <p id="color">${pets[i].color}</p>
+      <p id="skill">
+          ${pets[i].specialSkill}
+      </p>
+  </div> <!-- ./description-->
+  
+  <div class="animal">
+      <footer>
+          <h4>${pets[i].type}</h4>
+      </footer>
+  </div>
+  
+  
+  </div> <!-- card -->`
+}
 
-<div class="description">
-    <p id="color">Color</p>
-    <p id="skill">
-        Lorem ipsum dolor sit amet, consectetur adispiscing elit, Nulia
-    </p>
-</div> <!-- ./description-->
-
-<div class="animal">
-    <footer>
-        <h4>Cat</h4>
-    </footer>
-</div>
-
-
-</div> <!-- card -->`
-// pets.forEach((element) => {
-//   document.querySelector("#app").innerHTML = `{$element.name}`;
-// });
+// Storing the html to display the app.
+app.innerHTML = domString;
