@@ -286,7 +286,26 @@ renderAppToDOM(pets);
 */
 
 // Target the buttons.
+const catFilter = document.querySelector('#cat-filter');
+const dogFilter = document.querySelector('#dog-filter');
+const dinoFilter = document.querySelector('#dino-filter');
 
 // Func that filters the pets.
+const filter = (petID) => {
+  // To hold the filtered pets
+  let filteredPetArray = [];
+  // Iterate through pets to filter.
+  for(let pet of pets) {
+    // Check if value exists. If so, push it to the array!
+    if(pet.type === true) {
+      filteredPetArray.push(pet);
+    }
+  }
+  // Render filtered array the DOM
+  renderAppToDOM(filteredPetArray);
+}
 
-// Iterate through the pets to filter.
+// Invoke func once clicked.
+catFilter.addEventListener('click', filter);
+dogFilter.addEventListener('click', filter);
+dinoFilter.addEventListener('click', filter);
