@@ -13,7 +13,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "https://loremflickr.com/320/240/dino",
+      imageUrl: "https://loremflickr.com/320/240/dinosaur",
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Can prove he is a real man by drinking whiskey.",
       type: "dino",
-      imageUrl: "https://mydinosaurs.com/wp-content/uploads/2017/02/2-3-600x400.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dinosaur"
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "cat",
-      imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 6,
@@ -45,7 +45,7 @@ const pets = [
       color: "Black",
       specialSkill: "Can read (but cannot understand) Hebrew.",
       type: "dog",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dog"
     },
     {
       id: 7,
@@ -53,7 +53,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Able to stop chewing ice or whistling on request.",
       type: "cat",
-      imageUrl: "https://i.pinimg.com/originals/9d/da/3e/9dda3e5fd2b9886fc3d13ee47f52e8a0.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 8,
@@ -69,7 +69,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Adept at talking self and others out of fights.",
       type: "cat",
-      imageUrl: "https://tailandfur.com/wp-content/uploads/2015/09/40-Amazing-Cat-Funny-Moment-Pictures-Feature-Image.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 10,
@@ -77,7 +77,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "cat",
-      imageUrl: "https://i.pinimg.com/originals/04/54/92/0454926d39eeb420f4f01948e94e9e41.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 11,
@@ -93,7 +93,7 @@ const pets = [
       color: "Green",
       specialSkill: "Does not use excessive acronyms.",
       type: "dog",
-      imageUrl: "https://i.pinimg.com/originals/1f/30/8c/1f308c9c108a384b91b39430cc7312e9.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dog"
     },
     {
       id: 13,
@@ -109,7 +109,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Always up for dessert.",
       type: "cat",
-      imageUrl: "http://3.bp.blogspot.com/-RzIFLsIO-XQ/UFoMLOT66JI/AAAAAAAAVps/JRF98hdA9S8/s640/funny-cat-pictures-016-027.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 15,
@@ -117,7 +117,7 @@ const pets = [
       color: "Red",
       specialSkill: "Burps minimally.",
       type: "cat",
-      imageUrl: "http://cathumor.net/wp-content/uploads/2013/12/cat-humor-funny-karate-cat-2.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
       id: 16,
@@ -141,7 +141,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Proficient in air guitar",
       type: "dino",
-      imageUrl: "https://loremflickr.com/320/240/dino"
+      imageUrl: "https://loremflickr.com/320/240/dinosaur"
     },
     {
       id: 19,
@@ -149,7 +149,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dog"
     },
     {
       id: 20,
@@ -181,7 +181,7 @@ const pets = [
       color: "Red",
       specialSkill: "Enjoys fine wine.",
       type: "dog",
-      imageUrl: "http://1.bp.blogspot.com/-VjM0CmtN-vU/T7YX-LXa09I/AAAAAAAADA0/Vt1oGWEG0lw/s1600/sheepdog+border+collie+shakes+off+water+funny+picture+photo+pulling+faces+raspberry+tongue.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dog"
     },
     {
         id: 24,
@@ -205,7 +205,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Cleans himself.",
       type: "dog",
-      imageUrl: "https://www.thetrendywhippet.co.uk/wp-content/uploads/2016/11/IMG_1651-600x400.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dog"
     },
     {
         id: 27,
@@ -213,7 +213,7 @@ const pets = [
       color: "Green",
       specialSkill: "Admits he is wrong",
       type: "dino",
-      imageUrl: "https://assets.creationmuseum.org/img/pages/1703-DinoDen-TwoCard.jpg"
+      imageUrl: "https://loremflickr.com/320/240/dinosaur"
     },
     {
         id: 28,
@@ -221,7 +221,7 @@ const pets = [
       color: "Purple",
       specialSkill: "Dances when he has to.",
       type: "cat",
-      imageUrl: "https://tailandfur.com/wp-content/uploads/2016/03/40-Scary-and-Funny-Cat-Pictures-8.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
         id: 29,
@@ -229,7 +229,7 @@ const pets = [
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
       type: "cat",
-      imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
+      imageUrl: "https://loremflickr.com/320/240/cat"
     },
     {
         id: 30,
@@ -241,41 +241,52 @@ const pets = [
     }
   ];
 
-// target id #app on DOM
-const app = document.querySelector("#app");
+// Func that renders the array to the DOM
+const renderAppToDOM = (array) => {
 
-// Check to see if we can get something on the page
-// app.innerHTML = "Hello World";
+  // Empty string. Will use later to add pet objects to.
+  let domString = "";
 
-// create an empty string to add to later.
-let domString = "";
+  //loop through pets values.
+  for(let pet of pets) {
+    // store the html into domString
+    domString += `<div class="card">
+    <header>
+        <h2>${pet.name}</h2>
+    </header>
+    
+    <img src="${pet.imageUrl}" alt="placeholder">
+    
+    <div class="description">
+        <p id="color">${pet.color}</p>
+        <p id="skill">
+            ${pet.specialSkill}
+        </p>
+    </div> <!-- ./description-->
+    
+    <div class="animal">
+        <footer>
+            <h4>${pet.type}</h4>
+        </footer>
+    </div>
+    </div> <!-- card -->`
+  }
+  // Target the app.
+  const app = document.querySelector('#app');
 
-//loop through object values.
-for(let i = 0; i < pets.length; i++) {
-  // store the html into domString
-  domString += `<div class="card">
-  <header>
-      <h2>${pets[i].name}</h2>
-  </header>
-  
-  <img src="${pets[i].imageUrl}" alt="placeholder">
-  
-  <div class="description">
-      <p id="color">${pets[i].color}</p>
-      <p id="skill">
-          ${pets[i].specialSkill}
-      </p>
-  </div> <!-- ./description-->
-  
-  <div class="animal">
-      <footer>
-          <h4>${pets[i].type}</h4>
-      </footer>
-  </div>
-  
-  
-  </div> <!-- card -->`
+  // Set the pets to the app div.
+  app.innerHTML = domString;
 }
 
-// Storing the html to display the app.
-app.innerHTML = domString;
+// Render the pets object to the DOM
+renderAppToDOM(pets);
+
+/*
+================================= Filter buttons =================================
+*/
+
+// Target the buttons.
+
+// Func that filters the pets.
+
+// Iterate through the pets to filter.
