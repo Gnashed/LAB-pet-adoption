@@ -298,7 +298,7 @@ const filter = () => {
   // Iterate through pets to filter.
   for(let pet of pets) {
     // Check if value exists. If so, push it to the array!
-    if(pet.type === "cat" || "dog" || "dino") {
+    if (pet.type === "cat") {
       filteredPetArray.push(pet);
       console.log(pet);
     }
