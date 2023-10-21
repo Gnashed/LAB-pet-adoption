@@ -291,14 +291,16 @@ const dogFilter = document.querySelector('#dog-filter');
 const dinoFilter = document.querySelector('#dino-filter');
 
 // Func that filters the pets.
-const filter = (petID) => {
+const filter = () => {
   // To hold the filtered pets
   let filteredPetArray = [];
+
   // Iterate through pets to filter.
   for(let pet of pets) {
     // Check if value exists. If so, push it to the array!
-    if(pet.type === true) {
+    if(pet.type === "cat" || "dog" || "dino") {
       filteredPetArray.push(pet);
+      console.log(pet);
     }
   }
   // Render filtered array the DOM
