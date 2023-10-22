@@ -300,7 +300,10 @@ const filter = () => {
     // Check if value exists. If so, push it to the array!
     if (pet.type === "cat") {
       filteredPetArray.push(pet);
-      console.log(pet);
+    } else if (pet.type === "dog") {
+      filteredPetArray.push(pet);
+    } else if (pet.type === "dino") {
+      filteredPetArray.push(console.log(pet));
     }
   }
   // Render filtered array the DOM
