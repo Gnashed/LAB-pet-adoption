@@ -247,27 +247,27 @@ const renderAppToDOM = (array) => {
   // Empty string. Will use later to add pet objects to.
   let domString = "";
 
-  //loop through pets values.
-  for(let pet of pets) {
+  //loop through values of array.
+  array.forEach((object) => {
     // store the html into domString
     domString += `<div class="card">
     <header>
-        <h2>${pet.name}</h2>
+        <h2>${object.name}</h2>
     </header>
-    <img src="${pet.imageUrl}" alt="placeholder">
+    <img src="${object.imageUrl}" alt="placeholder">
     <div class="description">
-        <p id="color">${pet.color}</p>
+        <p id="color">${object.color}</p>
         <p id="skill">
-            ${pet.specialSkill}
+            ${object.specialSkill}
         </p>
     </div> <!-- ./description-->
     <div class="animal">
         <footer>
-            <h4>${pet.type}</h4>
+            <h4>${object.type}</h4>
         </footer>
     </div>
     </div> <!-- card -->`
-  }
+  })
 
   // Target the app.
   const app = document.querySelector('#app');
