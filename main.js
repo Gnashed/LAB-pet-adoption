@@ -254,16 +254,13 @@ const renderAppToDOM = (array) => {
     <header>
         <h2>${pet.name}</h2>
     </header>
-    
     <img src="${pet.imageUrl}" alt="placeholder">
-    
     <div class="description">
         <p id="color">${pet.color}</p>
         <p id="skill">
             ${pet.specialSkill}
         </p>
     </div> <!-- ./description-->
-    
     <div class="animal">
         <footer>
             <h4>${pet.type}</h4>
@@ -271,6 +268,7 @@ const renderAppToDOM = (array) => {
     </div>
     </div> <!-- card -->`
   }
+
   // Target the app.
   const app = document.querySelector('#app');
 
@@ -306,7 +304,7 @@ const filter = () => {
       filteredPetArray.push(pet);
     }
   }
-  // Render filtered array the DOM
+  // Render filtered array to the DOM
   renderAppToDOM(filteredPetArray);
 }
 
