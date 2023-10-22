@@ -303,7 +303,7 @@ const filter = () => {
     } else if (pet.type === "dog") {
       filteredPetArray.push(pet);
     } else if (pet.type === "dino") {
-      filteredPetArray.push(console.log(pet));
+      filteredPetArray.push(pet);
     }
   }
   // Render filtered array the DOM
