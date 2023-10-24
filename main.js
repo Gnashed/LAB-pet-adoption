@@ -243,37 +243,35 @@ const pets = [
 
 // Func that renders the array to the DOM
 const renderAppToDOM = (array) => {
+  // Empty string. Will use later to add pet objects to.
+  let domString = "";
 
-// Empty string. Will use later to add pet objects to.
-let domString = "";
+  //loop through values of array
+  for(let value of array) {
+    // store the html into domString
+    domString += `<div class="card">
+    <header>
+        <h2>${value.name}</h2>
+    </header>
+    <img src="${value.imageUrl}" alt="picture of animal">
+    <div class="description">
+        <p id="color">${value.color}</p>
+        <p id="skill">
+            ${value.specialSkill}
+        </p>
+    </div> <!-- ./description-->
+    <div class="animal">
+        <footer>
+            <h4>${value.type}</h4>
+        </footer>
+    </div>
+    </div> <!-- card -->`
+  }
 
-//loop through values of array
-for(let value of array) {
-  // store the html into domString
-  domString += `<div class="card">
-  <header>
-      <h2>${value.name}</h2>
-  </header>
-  <img src="${value.imageUrl}" alt="picture of animal">
-  <div class="description">
-      <p id="color">${value.color}</p>
-      <p id="skill">
-          ${value.specialSkill}
-      </p>
-  </div> <!-- ./description-->
-  <div class="animal">
-      <footer>
-          <h4>${value.type}</h4>
-      </footer>
-  </div>
-  </div> <!-- card -->`
-}
-
-// Target the app.
-const app = document.querySelector('#app');
-
-// Set the pets to the app div.
-app.innerHTML = domString;
+  // Target the app.
+  const app = document.querySelector('#app');
+  // Set the pets to the app div.
+  app.innerHTML = domString;
 }
 
 // Render the pets object to the DOM
@@ -301,10 +299,11 @@ const filter = (array, type) => {
     }
   }
   // Render filtered array to the DOM
+  // renderAppToDOM(filteredArray);
   renderAppToDOM(filteredArray);
 }
 
 // Invoke func once clicked.
-catFilter.addEventListener('click', filter(pets, "cat"));
-dogFilter.addEventListener('click', filter(pets, "dog"));
-dinoFilter.addEventListener('click', filter(pets, "dino"));
+// catFilter.addEventListener('click', filter(pets, "cat"));
+// dogFilter.addEventListener('click', filter(pets, "dog"));
+// dinoFilter.addEventListener('click', filter(pets, "dino"));
