@@ -299,11 +299,16 @@ const filter = (array, type) => {
     }
   }
   // Render filtered array to the DOM
-  // renderAppToDOM(filteredArray);
   renderAppToDOM(filteredArray);
 }
 
 // Invoke func once clicked.
-// catFilter.addEventListener('click', filter(pets, "cat"));
-// dogFilter.addEventListener('click', filter(pets, "dog"));
-// dinoFilter.addEventListener('click', filter(pets, "dino"));
+catFilter.addEventListener('click', () => {
+  filter(pets, "cat");
+});
+dogFilter.addEventListener('click', () => {
+  filter(pets, "dog");
+});
+dinoFilter.addEventListener('click', () => {
+  filter(pets, "dino");
+});
