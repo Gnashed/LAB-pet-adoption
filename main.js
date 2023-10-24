@@ -294,7 +294,7 @@ const filter = (array, type) => {
   // Iterate values.
   for(let value of array) {
     // Check if value exists. If so, push it to the array!
-    if (array.type === type) {
+    if (value.type === type) {
       filteredArray.push(value);
     }
   }
