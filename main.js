@@ -260,6 +260,10 @@ const renderAppToDOM = (array) => {
             ${value.specialSkill}
         </p>
     </div> <!-- ./description-->
+    <div class="card-btns">
+      <button type="button" id="adopt-me" value="adopt">Adopt Me!</button>
+      <button type="button" id="delete" value="delete">Delete</button>
+    </div>
     <div class="animal">
         <footer>
             <h4>${value.type}</h4>
@@ -285,6 +289,7 @@ renderAppToDOM(pets);
 const catFilter = document.querySelector('#cat-filter');
 const dogFilter = document.querySelector('#dog-filter');
 const dinoFilter = document.querySelector('#dino-filter');
+const showAllPets = document.querySelector('#showAllPets');
 
 // Func that filters the pets.
 const filter = (array, type) => {
@@ -311,4 +316,7 @@ dogFilter.addEventListener('click', () => {
 });
 dinoFilter.addEventListener('click', () => {
   filter(pets, "dino");
+});
+showAllPets.addEventListener('click', () => {
+  renderAppToDOM(pets);
 });
