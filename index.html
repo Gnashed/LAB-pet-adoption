@@ -7,12 +7,26 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="filter">
-        <button type="button" id="cat-filter" value="Cats">Cats</button>
-        <button type="button" id="dog-filter" value="Dogs">Dogs</button>
-        <button type="button" id="dino-filter" value="Dinos">Dinos</button>
-        <button type="button" id="showAllPets" value="All">Clear</button>
-    </div>
+    <nav>
+        <h1>Pet Adoption</h1>
+
+        <div class="filter">
+            <button type="button" id="cat-filter" value="Cats">Cats</button>
+            <button type="button" id="dog-filter" value="Dogs">Dogs</button>
+            <button type="button" id="dino-filter" value="Dinos">Dinos</button>
+            <button type="button" id="showAllPets" value="All">Clear</button>
+        </div>
+    </nav>
+
+    <form>
+        <h3>Add a Pet!</h3>
+        <input type="text" name="petName" id="pet-name" placeholder="Pet Name" required>
+        <input type="text" name="phoneNumber" id="pet-type" placeholder="Pet Type" required>
+        <input type="text" name="email" id="pet-color" placeholder="Color" required>
+        <input type="url" id="pet-image" placeholder="Image url" required>
+        <button type="submit" id="submit-form">Add Pet</button>
+    </form>
+    
     
     <div id="app"></div> <!-- ./app -->
     <script src="main.js"></script>
