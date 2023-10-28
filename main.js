@@ -320,3 +320,32 @@ dinoFilter.addEventListener('click', () => {
 showAllPets.addEventListener('click', () => {
   renderAppToDOM(pets);
 });
+
+/*
+====================== Create new pet object from form ======================
+*/
+
+// Target form
+const form = document.querySelector("form");
+
+// Func that creates a new pet object from form data
+const createPet = (event) => {
+  event.preventDefault();
+
+  const newPet = {
+    id: pets.length + 1,
+    name: document.querySelector("#pet-name").value,
+    color: document.querySelector("#pet-color").value,
+    specialSkill: document.querySelector("#special-skill").value,
+    type: document.querySelector("#pet-type").value,
+    imageUrl: document.querySelector("#pet-image").value
+  }
+  // Push new pet to array of pets, render pets to DOM
+  pets.push(newPet);
+  renderAppToDOM(pets);
+  // Reset the form.
+  form.reset();
+}
+
+// Listen for the form submit and pass it.
+form.addEventListener('click', createPet);
