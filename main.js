@@ -258,7 +258,7 @@ pets.forEach(pet => {
           <h2 class="card-title">${pet.name}</h2>
         </header>
 
-        <img src="${pet.imageUrl}" class="card-img-top" alt="picture of a house">
+        <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
         
         <h4 class="card-text">${pet.color}</h4>
 
