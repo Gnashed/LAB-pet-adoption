@@ -1,0 +1,81 @@
+nav {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.navbar a {
+  color: white;
+}
+.navbar a:hover {
+  color: wheat;
+}
+.navbar-brand {
+  color: white;
+}
+.custom-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav-item {
+  padding-right: 50px;
+}
+
+.filter-buttons {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(56, 50, 50);
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.container {
+  /* border: yellow 4px solid; */
+  margin-top: 70px;
+}
+
+.row {
+  /* border: blue 4px solid; */
+  margin: 15px 0;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+/* @media screen and (min-width: 992px) {
+  
+} */
+
+.card:hover {
+  /* animation-name: product-card; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-title {
+  border: 1px solid lightblue;
+}
+
+img {
+  transition: transform 0.30s;
+}
+
+img:hover {
+  transform: scale(1.07, 1.07);
+}
+
+.card-text {
+  text-align: justify;
+}
+
+header {
+  font-weight: bold;
+}
+
+footer {
+  color: yellow;
+  font-weight: bold;
+  background-color: darkgray;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
