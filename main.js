@@ -252,7 +252,7 @@ let domString = '';
 pets.forEach(pet => {
   petCard.innerHTML += `
   <div class="row">
-    <div class="card container col-2 px-1" style="width: 20rem">
+    <div class="card container col px-1" style="width: 20rem">
       <div class="card-body">
         <header class="text-center">
           <h2 class="card-title">${pet.name}</h2>
