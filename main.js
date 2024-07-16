@@ -168,7 +168,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/red-dinosaur"
     },
     {
-        id: 22,
+      id: 22,
       name: "Snuggles",
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
@@ -176,7 +176,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/orange-cat"
     },
     {
-        id: 23,
+      id: 23,
       name: "Buddy",
       color: "Red",
       specialSkill: "Enjoys fine wine.",
@@ -184,7 +184,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/red-dog"
     },
     {
-        id: 24,
+      id: 24,
       name: "George",
       color: "Brown",
       specialSkill: "Participates in karaoke but does not force others to go out to karaoke.",
@@ -200,7 +200,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/red-cat"
     },
     {
-        id: 26,
+      id: 26,
       name: "Bubba",
       color: "Yellow",
       specialSkill: "Cleans himself.",
@@ -208,7 +208,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/yellow-dog"
     },
     {
-        id: 27,
+      id: 27,
       name: "Chloe",
       color: "Green",
       specialSkill: "Admits he is wrong",
@@ -216,7 +216,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/green-dinosaur"
     },
     {
-        id: 28,
+      id: 28,
       name: "Nala",
       color: "Purple",
       specialSkill: "Dances when he has to.",
@@ -224,7 +224,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/purple-cat"
     },
     {
-        id: 29,
+      id: 29,
       name: "Oscar",
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
@@ -232,7 +232,7 @@ const pets = [
       imageUrl: "https://loremflickr.com/320/240/green-cat"
     },
     {
-        id: 30,
+      id: 30,
       name: "Lucy",
       color: "Red",
       specialSkill: "Doesn't get weirded out by the word \"moist\".",
@@ -245,27 +245,29 @@ const pets = [
   ============== END OF SAMPLE DATA ==============
 */
 
-const petCard = document.querySelector('#render-card');
+const petCard = document.querySelector('.render-cards-here');
 
 let domString = '';
 
 pets.forEach(pet => {
   petCard.innerHTML += `
-  <div class="card container col-2 px-1" style="width: 20rem">
-    <div class="card-body">
-      <header class="text-center">
-        <h2 class="card-title">${pet.name}</h2>
-      </header>
+  <div class="row">
+    <div class="card container col-2 px-1" style="width: 20rem">
+      <div class="card-body">
+        <header class="text-center">
+          <h2 class="card-title">${pet.name}</h2>
+        </header>
 
-      <img src="${pet.imageUrl}" class="card-img-top" alt="picture of a house">
-      
-      <h4 class="card-text">${pet.color}</h4>
+        <img src="${pet.imageUrl}" class="card-img-top" alt="picture of a house">
+        
+        <h4 class="card-text">${pet.color}</h4>
 
-      <p class="card-text">${pet.specialSkill}</p>
+        <p class="card-text">${pet.specialSkill}</p>
 
-      <footer class="mt-3 text-center">
-        <p style="font-weight: bold;">${pet.type}</p>
-      </footer>
-    </div>
-  </div> <!-- ./card -->`;
+        <footer class="mt-3 text-center">
+          <p style="font-weight: bold;">${pet.type}</p>
+        </footer>
+      </div>
+    </div> <!-- ./card -->
+  </div>`;
 });
