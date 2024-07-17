@@ -242,9 +242,17 @@ const pets = [
   ];
 
 /*
-  ============== END OF SAMPLE DATA ==============
+  ============== Utils ==============
 */
 
+const renderToDom = (divID, content) => {
+  const selectedDiv = document.querySelector(divID);
+  selectedDiv.innerHTML = content;
+};
+
+/*
+  ============== TODO: RENAME ME ==============
+*/
 const petCard = document.querySelector('.render-cards-here');
 
 let domString = '';
@@ -271,3 +279,11 @@ pets.forEach(pet => {
     </div> <!-- ./card -->
   </div>`;
 });
+
+/*
+  ============== Filter Buttons ==============
+*/
+const catFilterButton = document.querySelector('.cat-filter');
+const dogFilterButton = document.querySelector('.dog-filter');
+const dinoFilterButton = document.querySelector('.dino-filter');
+const allFilterButton = document.querySelector('.all-filter');
