@@ -295,17 +295,22 @@ const filterPets = (array, filter) => {
 };
 
 /*
-  ============== Filter Buttons ==============
+  ============== Filter Buttons, Create Pet Button ==============
 */
 const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
 const dinoFilterButton = document.querySelector('.dino-filter');
 const allFilterButton = document.querySelector('.all-filter');
 
+const addAPetButton = document.querySelector('.add-a-pet-btn');
 /*
   ============== Function calls ==============
 */
 renderPets(pets);
+
+/*
+  ============== Event Listeners ==============
+*/
 
 catFilterButton.addEventListener('click', () => {
   filterPets(pets, 'cat');
@@ -318,4 +323,8 @@ dinoFilterButton.addEventListener('click', () => {
 });
 allFilterButton.addEventListener('click', () => {
   renderPets(pets);
+});
+
+addAPetButton.addEventListener('click', () => {
+  console.log('addAPetButton click registered!');
 });
