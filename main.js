@@ -253,33 +253,6 @@ const renderToDom = (divID, content) => {
 /*
   ============== Render Pets, filter pets ==============
 */
-// const petCard = document.querySelector('.render-cards-here');
-
-// let domString = "";
-
-// pets.forEach(pet => {
-//   petCard.innerHTML += `
-//   <div class="row">
-//     <div class="card container col px-1" style="width: 20rem">
-//       <div class="card-body">
-//         <header class="text-center">
-//           <h2 class="card-title">${pet.name}</h2>
-//         </header>
-
-//         <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
-        
-//         <h4 class="card-text mt-2">${pet.color}</h4>
-
-//         <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
-
-//         <footer class="mt-3 text-center">
-//           <p style="font-weight: bold;">${pet.type}</p>
-//         </footer>
-//       </div>
-//     </div> <!-- ./card -->
-//   </div>`;
-// });
-
 const renderPets = (array) => {
   let domString = "";
 
