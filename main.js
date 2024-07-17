@@ -295,6 +295,38 @@ const filterPets = (array, filter) => {
 };
 
 /*
+  ============== Modal ==============
+*/
+
+// const modal = () => {
+//   const domString = `
+
+//   `;
+
+//   renderToDom("#render-modal-here", domString);
+// };
+const targetModal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".add-a-pet-btn");
+const closeModalBtn = document.querySelector(".btn-close");
+
+// OPEN MODAL
+const openModal = () => {
+  targetModal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+openModalBtn.addEventListener("click", openModal);
+
+// ClOSE MODAL
+const closeModal = () => {
+  targetModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+
+/*
   ============== Filter Buttons, Create Pet Button ==============
 */
 const catFilterButton = document.querySelector('.cat-filter');
@@ -327,4 +359,5 @@ allFilterButton.addEventListener('click', () => {
 
 addAPetButton.addEventListener('click', () => {
   console.log('addAPetButton click registered!');
+  openModal();
 });
