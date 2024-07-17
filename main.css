@@ -68,7 +68,7 @@ img {
   transition: transform 0.30s;
 }
 
-img:hover {
+.card img:hover {
   transform: scale(1.07, 1.07);
 }
 
