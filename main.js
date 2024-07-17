@@ -251,34 +251,62 @@ const renderToDom = (divID, content) => {
 };
 
 /*
-  ============== TODO: RENAME ME ==============
+  ============== Render Pets ==============
 */
-const petCard = document.querySelector('.render-cards-here');
+// const petCard = document.querySelector('.render-cards-here');
 
-let domString = '';
+// let domString = "";
 
-pets.forEach(pet => {
-  petCard.innerHTML += `
-  <div class="row">
-    <div class="card container col px-1" style="width: 20rem">
-      <div class="card-body">
-        <header class="text-center">
-          <h2 class="card-title">${pet.name}</h2>
-        </header>
+// pets.forEach(pet => {
+//   petCard.innerHTML += `
+//   <div class="row">
+//     <div class="card container col px-1" style="width: 20rem">
+//       <div class="card-body">
+//         <header class="text-center">
+//           <h2 class="card-title">${pet.name}</h2>
+//         </header>
 
-        <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
+//         <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
         
-        <h4 class="card-text mt-2">${pet.color}</h4>
+//         <h4 class="card-text mt-2">${pet.color}</h4>
 
-        <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
+//         <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-        <footer class="mt-3 text-center">
-          <p style="font-weight: bold;">${pet.type}</p>
-        </footer>
-      </div>
-    </div> <!-- ./card -->
-  </div>`;
-});
+//         <footer class="mt-3 text-center">
+//           <p style="font-weight: bold;">${pet.type}</p>
+//         </footer>
+//       </div>
+//     </div> <!-- ./card -->
+//   </div>`;
+// });
+
+const renderPets = (array) => {
+  let domString = "";
+
+  array.forEach(pet => {
+    domString += `
+    <div class="row">
+      <div class="card container col px-1" style="width: 20rem">
+        <div class="card-body">
+          <header class="text-center">
+            <h2 class="card-title">${pet.name}</h2>
+          </header>
+
+          <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
+          
+          <h4 class="card-text mt-2">${pet.color}</h4>
+
+          <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
+
+          <footer class="mt-3 text-center">
+            <p style="font-weight: bold;">${pet.type}</p>
+          </footer>
+        </div>
+      </div> <!-- ./card -->
+    </div>`;
+  });
+  renderToDom('.render-cards-here', domString);
+};
 
 /*
   ============== Filter Buttons ==============
@@ -287,3 +315,8 @@ const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
 const dinoFilterButton = document.querySelector('.dino-filter');
 const allFilterButton = document.querySelector('.all-filter');
+
+/*
+  ============== Function calls ==============
+*/
+renderPets(pets);
