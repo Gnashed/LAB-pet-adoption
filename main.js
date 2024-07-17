@@ -251,7 +251,7 @@ const renderToDom = (divID, content) => {
 };
 
 /*
-  ============== Render Pets ==============
+  ============== Render Pets, filter pets ==============
 */
 // const petCard = document.querySelector('.render-cards-here');
 
@@ -308,6 +308,19 @@ const renderPets = (array) => {
   renderToDom('.render-cards-here', domString);
 };
 
+const filterPets = (array, filter) => {
+  const filteredPetArray = [];
+
+  array.forEach(pet => {
+    if (pet.type === filter) {
+      filteredPetArray.push(pet);
+    }
+  });
+  // console.log(filteredPetArray);
+  renderPets(filteredPetArray);
+  return filteredPetArray;
+};
+
 /*
   ============== Filter Buttons ==============
 */
@@ -320,3 +333,16 @@ const allFilterButton = document.querySelector('.all-filter');
   ============== Function calls ==============
 */
 renderPets(pets);
+
+catFilterButton.addEventListener('click', () => {
+  filterPets(pets, 'cat');
+});
+dogFilterButton.addEventListener('click', () => {
+  filterPets(pets, 'dog');
+});
+dinoFilterButton.addEventListener('click', () => {
+  filterPets(pets, 'dino');
+});
+allFilterButton.addEventListener('click', () => {
+  renderPets(pets);
+});
