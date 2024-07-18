@@ -261,7 +261,7 @@ const renderPets = (array) => {
   const dinoColor = 'rgb(49, 210, 242)';
 
   array.forEach(pet => {
-    if (pet.type === 'cat') {
+    if (pet.type === 'cat' || pet.type === 'Cat') {
     domString += `
     <div class="row">
       <div class="card container col px-1" style="width: 20rem">
@@ -282,7 +282,7 @@ const renderPets = (array) => {
         </div>
       </div> <!-- ./card -->
     </div>`;
-    } else if (pet.type === 'dog') {
+    } else if (pet.type === 'dog' || pet.type === 'Dog') {
       domString += `
       <div class="row">
         <div class="card container col px-1" style="width: 20rem">
@@ -303,7 +303,7 @@ const renderPets = (array) => {
           </div>
         </div> <!-- ./card -->
       </div>`;
-    } else if (pet.type === 'dino') {
+    } else if (pet.type === 'dino' || pet.type === 'Dino') {
       domString += `
       <div class="row">
         <div class="card container col px-1" style="width: 20rem">
@@ -431,6 +431,7 @@ createAPetButton.addEventListener('click', (e) => {
   createPet();
   petForm.reset();
   closeModal();
+  renderPets(pets);
 });
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);
