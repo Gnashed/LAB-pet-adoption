@@ -297,11 +297,11 @@ const filterPets = (array, filter) => {
 const createPet = () => {
   const pet = {
     id: pets.length + 1,
-    name: document.getElementById('pet-name').value,
-    color: document.getElementById('pet-color').value,
-    imageUrl: document.getElementById('pet-image').value,
-    specialSkill: document.getElementById('pet-special-skill').value,
-    type: document.getElementById('pet-type').value
+    name: document.querySelector('.pet-name').value,
+    color: document.querySelector('.pet-color').value,
+    imageUrl: document.querySelector('.pet-image').value,
+    specialSkill: document.querySelector('.pet-special-skill').value,
+    type: document.querySelector('.pet-type').value
   };
 
   pets.push(pet);
@@ -330,7 +330,7 @@ const closeModal = () => {
   overlay.classList.add("hidden");
 };
 /*
-  ============== Filter Buttons, Create Pet Button ==============
+  ============== Filter Buttons, Create Pet Button, form ==============
 */
 const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
@@ -339,6 +339,7 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
+const petForm = document.querySelector('#create-a-pet-form');
 /*
   ============== Function calls ==============
 */
@@ -365,8 +366,11 @@ addAPetButton.addEventListener('click', () => {
   console.log('addAPetButton click registered!');
   openModal();
 });
-createAPetButton.addEventListener('click', () => {
+createAPetButton.addEventListener('click', (e) => {
+  e.preventDefault();
   createPet();
+  petForm.reset();
+  closeModal();
 });
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);

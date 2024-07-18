@@ -77,12 +77,24 @@
         </p>
       </div>
 
-      <input type="text" id="pet-name" placeholder="Ringo" />
-      <input type="text" id="pet-color" placeholder="Orange" />
-      <input type="text" id="pet-image" placeholder="Paste a url" />
-      <input type="text" id="pet-special-skill" placeholder="Very persuasive. Probably a spy cat..." />
-      <input type="text" id="pet-type" placeholder="Cat" />
-      <button class="submit-btn">Submit</button>
+      <form id="create-a-pet-form">
+        <label for="pet-name" class="form-label">Pet name </label>
+        <input type="text" class="pet-name form-control" placeholder="Ringo" />
+        
+        <label for="pet-color" class="form-label">Color </label>
+        <input type="text" class="pet-color form-control" placeholder="Orange" />
+
+        <label for="pet-image" class="form-label">Picture </label>
+        <input type="text" class="pet-image form-control" placeholder="Paste a url" />
+
+        <label for="pet-special-skill" class="form-label">Special skill </label>
+        <input type="text" class="pet-special-skill form-control" placeholder="Very persuasive. Probably a spy cat..." />
+
+        <label for="pet-type" class="form-label">Cat/Dog/Dino? </label>
+        <input type="text" class="pet-type form-control" placeholder="Cat" />
+
+        <button class="submit-btn">Submit</button>
+      </form>
     </section>
 
     <div class="overlay hidden"></div>
