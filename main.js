@@ -255,8 +255,13 @@ const renderToDom = (divID, content) => {
 */
 const renderPets = (array) => {
   let domString = "";
+  const targetFooter = document.querySelector('footer');
+  const catColor = 'rgb(255, 201, 40)';
+  const dogColor = 'rgb(189, 45, 59)';
+  const dinoColor = 'rgb(49, 210, 242)';
 
   array.forEach(pet => {
+    if (pet.type === 'cat') {
     domString += `
     <div class="row">
       <div class="card container col px-1" style="width: 20rem">
@@ -271,14 +276,69 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <footer class="pet-card-footer mt-3 text-center">
+          <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
           </footer>
         </div>
       </div> <!-- ./card -->
     </div>`;
+    } else if (pet.type === 'dog') {
+      domString += `
+      <div class="row">
+        <div class="card container col px-1" style="width: 20rem">
+          <div class="card-body">
+            <header class="text-center">
+              <h2 class="card-title">${pet.name}</h2>
+            </header>
+
+            <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
+            
+            <h4 class="card-text mt-2">${pet.color}</h4>
+
+            <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
+
+            <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
+              <p style="font-weight: bold;">${pet.type}</p>
+            </footer>
+          </div>
+        </div> <!-- ./card -->
+      </div>`;
+    } else if (pet.type === 'dino') {
+      domString += `
+      <div class="row">
+        <div class="card container col px-1" style="width: 20rem">
+          <div class="card-body">
+            <header class="text-center">
+              <h2 class="card-title">${pet.name}</h2>
+            </header>
+
+            <img src="${pet.imageUrl}" class="card-img-top" alt="picture of ${pet.type}">
+            
+            <h4 class="card-text mt-2">${pet.color}</h4>
+
+            <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
+
+            <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
+              <p style="font-weight: bold;">${pet.type}</p>
+            </footer>
+          </div>
+        </div> <!-- ./card -->
+      </div>`;
+    }
+    
   });
   renderToDom('.render-cards-here', domString);
+
+  // const targetFooter = document.querySelector('footer');
+  // pets.forEach(pet => {
+  //   if (pet.type === 'dog' || pet.type === 'Dog') {
+  //     targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
+  //   } else if (pet.type === 'cat' || pet.type === 'Cat') {
+  //     targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
+  //   } else if (pet.type === 'dino' || pet.type === 'Dino') {
+  //     targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
+  //   }
+  // });
 };
 
 const filterPets = (array, filter) => {
@@ -345,16 +405,6 @@ const petForm = document.querySelector('#create-a-pet-form');
   ============== Function calls ==============
 */
 renderPets(pets);
-const targetFooter = document.querySelector('footer');
-pets.forEach(pet => {
-  if (pet.type === 'dog' || pet.type === 'Dog') {
-    targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
-  } else if (pet.type === 'cat' || pet.type === 'Cat') {
-    targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
-  } else if (pet.type === 'dino' || pet.type === 'Dino') {
-    targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
-  }
-});
 /*
   ============== Event Listeners ==============
 */

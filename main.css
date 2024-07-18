@@ -97,7 +97,7 @@ header {
 footer {
   color: yellow;
   font-weight: bold;
-  background-color: darkgray;
+  /* background-color: darkgray; */
 }
 
 h4 {
