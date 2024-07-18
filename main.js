@@ -325,7 +325,6 @@ const closeModal = () => {
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
-
 /*
   ============== Filter Buttons, Create Pet Button ==============
 */
