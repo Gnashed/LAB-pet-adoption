@@ -329,9 +329,6 @@ const closeModal = () => {
   targetModal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-closeModalBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
-
 /*
   ============== Filter Buttons, Create Pet Button ==============
 */
@@ -368,7 +365,9 @@ addAPetButton.addEventListener('click', () => {
   console.log('addAPetButton click registered!');
   openModal();
 });
-
 createAPetButton.addEventListener('click', () => {
   createPet();
 });
+// FOR MODALS
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
