@@ -271,7 +271,7 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <footer class="mt-3 text-center">
+          <footer class="pet-card-footer mt-3 text-center">
             <p style="font-weight: bold;">${pet.type}</p>
           </footer>
         </div>
@@ -332,6 +332,7 @@ const closeModal = () => {
 /*
   ============== Filter Buttons, Create Pet Button, form ==============
 */
+
 const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
 const dinoFilterButton = document.querySelector('.dino-filter');
@@ -344,7 +345,16 @@ const petForm = document.querySelector('#create-a-pet-form');
   ============== Function calls ==============
 */
 renderPets(pets);
-
+const targetFooter = document.querySelector('footer');
+pets.forEach(pet => {
+  if (pet.type === 'dog' || pet.type === 'Dog') {
+    targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
+  } else if (pet.type === 'cat' || pet.type === 'Cat') {
+    targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
+  } else if (pet.type === 'dino' || pet.type === 'Dino') {
+    targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
+  }
+});
 /*
   ============== Event Listeners ==============
 */
@@ -375,3 +385,18 @@ createAPetButton.addEventListener('click', (e) => {
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+/*
+  ===================== TODO: MOVE THIS =======================
+*/
+//Dynamically set the color of the footer.
+// const targetFooter = document.querySelector('.pet-card-footer');
+// pets.forEach(pet => {
+//   if (pet.type === 'dog' || pet.type === 'Dog') {
+//     targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
+//   } else if (pet.type === 'cat' || pet.type === 'Cat') {
+//     targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
+//   } else if (pet.type === 'dino' || pet.type === 'Dino') {
+//     targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
+//   }
+// });
