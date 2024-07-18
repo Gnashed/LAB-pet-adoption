@@ -295,16 +295,17 @@ const filterPets = (array, filter) => {
 };
 
 const createPet = () => {
-  const pet = [{
+  const pet = {
     id: pets.length + 1,
-    petName: document.getElementById('pet-name').value,
-    petColor: document.getElementById('pet-color').value,
-    petImage: document.getElementById('pet-image').value,
-    petSpecialSkill: document.getElementById('pet-type').value,
-    petType: document.getElementById('pet-type').value
-  }];
+    name: document.getElementById('pet-name').value,
+    color: document.getElementById('pet-color').value,
+    imageUrl: document.getElementById('pet-image').value,
+    specialSkill: document.getElementById('pet-special-skill').value,
+    type: document.getElementById('pet-type').value
+  };
 
   pets.push(pet);
+  console.log(pets)
   renderPets(pets);
 };
 
