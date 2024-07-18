@@ -251,7 +251,7 @@ const renderToDom = (divID, content) => {
 };
 
 /*
-  ============== Render Pets, filter pets ==============
+  ============== Render Pets, filter pets, create a pet ==============
 */
 const renderPets = (array) => {
   let domString = "";
@@ -294,17 +294,23 @@ const filterPets = (array, filter) => {
   return filteredPetArray;
 };
 
+const createPet = () => {
+  const pet = [{
+    id: pets.length + 1,
+    petName: document.getElementById('pet-name').value,
+    petColor: document.getElementById('pet-color').value,
+    petImage: document.getElementById('pet-image').value,
+    petSpecialSkill: document.getElementById('pet-type').value,
+    petType: document.getElementById('pet-type').value
+  }];
+
+  pets.push(pet);
+  renderPets(pets);
+};
+
 /*
   ============== Modal ==============
 */
-
-// const modal = () => {
-//   const domString = `
-
-//   `;
-
-//   renderToDom("#render-modal-here", domString);
-// };
 const targetModal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".add-a-pet-btn");
@@ -334,6 +340,7 @@ const dinoFilterButton = document.querySelector('.dino-filter');
 const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
+const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
 /*
   ============== Function calls ==============
 */
@@ -359,4 +366,8 @@ allFilterButton.addEventListener('click', () => {
 addAPetButton.addEventListener('click', () => {
   console.log('addAPetButton click registered!');
   openModal();
+});
+
+createAPetButton.addEventListener('click', () => {
+  createPet();
 });
