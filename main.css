@@ -21,15 +21,15 @@ nav {
 }
 
 h1 {
-  /* background-color: rgba(128, 128, 128, 0.221); */
   backdrop-filter: blur(2px);
-  text-align: center;
   font-size: 3rem;
   color: white;
   padding: 10px 0;
   position: absolute;
-  top: 110px;
-  left: 320px;
+  /* To center the h1, set a top, left, and transform to the following values */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
 
@@ -39,6 +39,7 @@ h1 {
 }
 
 .wrapper {
+  border: 2px solid black;
   position: relative;
 }
 
