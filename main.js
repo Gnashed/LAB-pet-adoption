@@ -251,7 +251,7 @@ const renderToDom = (divID, content) => {
 };
 
 /*
-  ============== Render Pets, filter pets, create a pet ==============
+  ============== Render Pets, filter/create/delete pets ==============
 */
 const renderPets = (array) => {
   let domString = "";
@@ -276,6 +276,8 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
+          <button class="container">Delete</button>
+
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
           </footer>
@@ -296,6 +298,8 @@ const renderPets = (array) => {
             <h4 class="card-text mt-2">${pet.color}</h4>
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
+
+            <button class="container">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -318,6 +322,8 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
+            <button class="container">Delete</button>
+
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
             </footer>
@@ -328,17 +334,6 @@ const renderPets = (array) => {
     
   });
   renderToDom('.render-cards-here', domString);
-
-  // const targetFooter = document.querySelector('footer');
-  // pets.forEach(pet => {
-  //   if (pet.type === 'dog' || pet.type === 'Dog') {
-  //     targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
-  //   } else if (pet.type === 'cat' || pet.type === 'Cat') {
-  //     targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
-  //   } else if (pet.type === 'dino' || pet.type === 'Dino') {
-  //     targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
-  //   }
-  // });
 };
 
 const filterPets = (array, filter) => {
@@ -368,6 +363,10 @@ const createPet = () => {
   console.log(pets)
   renderPets(pets);
 };
+
+const deletePet = () => {
+
+}
 
 /*
   ============== Modal ==============
@@ -436,18 +435,3 @@ createAPetButton.addEventListener('click', (e) => {
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
-
-/*
-  ===================== TODO: MOVE THIS =======================
-*/
-//Dynamically set the color of the footer.
-// const targetFooter = document.querySelector('.pet-card-footer');
-// pets.forEach(pet => {
-//   if (pet.type === 'dog' || pet.type === 'Dog') {
-//     targetFooter.style.backgroundColor = 'rgb(189, 45, 59)';
-//   } else if (pet.type === 'cat' || pet.type === 'Cat') {
-//     targetFooter.style.backgroundColor = 'rgb(255, 201, 40)';
-//   } else if (pet.type === 'dino' || pet.type === 'Dino') {
-//     targetFooter.style.backgroundColor = 'rgb(49, 210, 242)';
-//   }
-// });
