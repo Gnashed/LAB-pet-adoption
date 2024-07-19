@@ -22,7 +22,7 @@ nav {
 
 h1 {
   backdrop-filter: blur(2px);
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
   padding: 10px 0;
   position: absolute;
@@ -39,7 +39,7 @@ h1 {
 }
 
 .wrapper {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: relative;
 }
 
@@ -124,7 +124,6 @@ h4 {
 /* 
 ====================== MODAL ======================
 */
-
 .modal {
   z-index: 2;
   display: flex;
@@ -135,8 +134,11 @@ h4 {
   padding: 1.3rem;
   height: auto;
   position: absolute;
-  top: 5%;
-  transform: translate(75%, 0);
+  /* top: 5%;
+  transform: translate(75%, 0); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 15px;
