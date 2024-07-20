@@ -276,7 +276,7 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
+          <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -299,7 +299,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
+            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -322,7 +322,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
+            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -366,7 +366,29 @@ const createPet = () => {
 };
 
 const deletePet = () => {
-  
+  // Step 1: Targt the container
+  const targetCards = document.querySelector('.render-cards-here');
+
+  // Step 2: Capture clicks.
+  targetCards.addEventListener('click', (e) => {
+    // console.log(e.target.id);
+
+    // Step 3: Check e.target.id includes the string 'delete'. If so, use destructuring to find the index and delete the object from the array using its index.
+    if (e.target.id.includes('delete')) {
+      // array.split() returns an array. In this case, we're using destructuring to only save what would be the pet id.
+      const [ , id] = e.target.id.split('--');
+      console.log(id); // This should show the id of the element we clicked the delete button on in the console.
+
+      // Make sure the const 'id' is a number. Store the returned index number from pets array.
+      const index = pets.findIndex(e => e.id === Number(id));
+
+      // Modify the original array using splice. We want to remove one element from the pet's array using the provided position (index).
+      pets.splice(index, 1);
+
+      // Render pets
+      renderPets(pets);
+    }
+  });
 };
 /*
   ============== Modal ==============
