@@ -377,7 +377,7 @@ const deletePet = () => {
     if (e.target.id.includes('delete')) {
       // array.split() returns an array. In this case, we're using destructuring to only save what would be the pet id.
       const [ , id] = e.target.id.split('--');
-      console.log(id); // This should show the id of the element we clicked the delete button on in the console.
+      // console.log(id); // This should show the id of the element we clicked the delete button on in the console.
 
       // Make sure the const 'id' is a number. Store the returned index number from pets array.
       const index = pets.findIndex(e => e.id === Number(id));
