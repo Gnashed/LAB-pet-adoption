@@ -361,7 +361,6 @@ const createPet = () => {
 
   pets.push(pet);
   // console.log(pets)
-  const petForm = document.querySelector('#create-a-pet-form');
   renderPets(pets);
 };
 
@@ -396,6 +395,8 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
+const petForm = document.querySelector('#create-a-pet-form');
+
 /*
   ============== Function calls ==============
 */
@@ -421,7 +422,7 @@ allFilterButton.addEventListener('click', () => {
 addAPetButton.addEventListener('click', () => {
   openModal();
 });
-createAPetButton.addEventListener('click', (e) => {
+petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   createPet();
   closeModal();
