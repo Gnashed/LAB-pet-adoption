@@ -276,7 +276,7 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container" id="delete-pet-card-btn">Delete</button>
+          <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -299,7 +299,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container" id="delete-pet-card-btn">Delete</button>
+            <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -322,7 +322,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container" id="delete-pet-card-btn">Delete</button>
+            <button class="container" id="delete-pet-card-btn" data-id="${pet.id}">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -365,7 +365,9 @@ const createPet = () => {
   renderPets(pets);
 };
 
-const deletePet = () => {};
+const deletePet = () => {
+  
+};
 /*
   ============== Modal ==============
 */
