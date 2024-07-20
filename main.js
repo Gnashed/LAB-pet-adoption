@@ -276,7 +276,7 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container">Delete</button>
+          <button class="container" id="delete-pet-card-btn">Delete</button>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -299,7 +299,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container">Delete</button>
+            <button class="container" id="delete-pet-card-btn">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -322,7 +322,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container">Delete</button>
+            <button class="container" id="delete-pet-card-btn">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -331,7 +331,7 @@ const renderPets = (array) => {
         </div> <!-- ./card -->
       </div>`;
     }
-    
+
   });
   renderToDom('.render-cards-here', domString);
 };
@@ -360,14 +360,11 @@ const createPet = () => {
   };
 
   pets.push(pet);
-  console.log(pets)
+  // console.log(pets)
   renderPets(pets);
 };
 
-const deletePet = () => {
-
-}
-
+const deletePet = () => {};
 /*
   ============== Modal ==============
 */
@@ -389,9 +386,8 @@ const closeModal = () => {
   overlay.classList.add("hidden");
 };
 /*
-  ============== Filter Buttons, Create Pet Button, form ==============
+  ============== Filter Buttons, Create/Delete Pet Button, form ==============
 */
-
 const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
 const dinoFilterButton = document.querySelector('.dino-filter');
@@ -400,10 +396,12 @@ const allFilterButton = document.querySelector('.all-filter');
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
 const petForm = document.querySelector('#create-a-pet-form');
+
 /*
   ============== Function calls ==============
 */
 renderPets(pets);
+deletePet();
 /*
   ============== Event Listeners ==============
 */
@@ -422,16 +420,15 @@ allFilterButton.addEventListener('click', () => {
 });
 
 addAPetButton.addEventListener('click', () => {
-  console.log('addAPetButton click registered!');
   openModal();
 });
-createAPetButton.addEventListener('click', (e) => {
+petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   createPet();
-  petForm.reset();
   closeModal();
   renderPets(pets);
 });
+
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
