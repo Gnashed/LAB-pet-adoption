@@ -360,26 +360,12 @@ const createPet = () => {
   };
 
   pets.push(pet);
-  console.log(pets)
+  // console.log(pets)
   renderPets(pets);
 };
 
 const deletePet = () => {
-  // Target the parant container of the elements you need to loop through.
-  const targetDiv = document.querySelector('.render-cards-here');
-  console.log(targetDiv);
-  // Target the chlld elements.
-  const targetChildren = document.getElementsByClassName('card');
-  console.log(targetChildren);
-  // Iterate through the child elements to check the properties to find the element we're looking for.
-  for (child in targetChildren) {
-    // findIndex, store in a variable
 
-    // Compare the findIndex and the index number of the targeted child element.
-
-      // Delete the id that was matched from the array/data structure that contains that data.
-  };
-    
 };
 
 /*
