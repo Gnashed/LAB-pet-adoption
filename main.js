@@ -264,7 +264,7 @@ const renderPets = (array) => {
     if (pet.type === 'cat' || pet.type === 'Cat') {
     domString += `
     <div class="row">
-      <div class="card container col px-1" style="width: 20rem">
+      <div class="card container col mx-4" style="width: 14rem">
         <div class="card-body">
           <header class="text-center">
             <h2 class="card-title">${pet.name}</h2>
@@ -290,7 +290,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dog' || pet.type === 'Dog') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
@@ -316,7 +316,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dino' || pet.type === 'Dino') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
@@ -370,6 +370,20 @@ const createPet = () => {
   // console.log(pets)
   petForm.reset();
   renderPets(pets);
+};
+
+const updatePet = () => {
+  const targetCards = document.querySelector('.render-cards-here');
+  
+  targetCards.addEventListener('click', (e) => {
+    if(e.target.id.includes('edit')) {
+      const [ , id] = e.target.id.split('--');
+      const index = pets.findIndex(e => e.id === Number(id));
+
+      
+    }
+  });
+
 };
 
 const deletePet = () => {
@@ -427,13 +441,14 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
-const petForm = document.querySelector('#create-a-pet-form');
+const petForm = document.querySelector('#pet-form');
 
 /*
   ============== Function calls ==============
 */
 renderPets(pets);
 deletePet();
+updatePet();
 /*
   ============== Event Listeners ==============
 */
