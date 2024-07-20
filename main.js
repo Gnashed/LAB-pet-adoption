@@ -372,6 +372,10 @@ const createPet = () => {
   renderPets(pets);
 };
 
+const updatePet = () => {
+
+};
+
 const deletePet = () => {
   // Step 1: Targt the container
   const targetCards = document.querySelector('.render-cards-here');
@@ -427,7 +431,7 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
-const petForm = document.querySelector('#create-a-pet-form');
+const petForm = document.querySelector('#pet-form');
 
 /*
   ============== Function calls ==============
