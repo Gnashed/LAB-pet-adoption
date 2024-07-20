@@ -364,10 +364,7 @@ const createPet = () => {
   renderPets(pets);
 };
 
-const deletePet = () => {
-
-};
-
+const deletePet = () => {};
 /*
   ============== Modal ==============
 */
