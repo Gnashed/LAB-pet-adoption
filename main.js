@@ -276,7 +276,10 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
+          <div class="container text-center">
+            <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+            <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+          </div>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -298,8 +301,11 @@ const renderPets = (array) => {
             <h4 class="card-text mt-2">${pet.color}</h4>
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
-
-            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
+            
+            <div class="container text-center">
+              <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+              <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+            </div>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -321,9 +327,10 @@ const renderPets = (array) => {
             <h4 class="card-text mt-2">${pet.color}</h4>
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
-
-            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
-
+            <div class="container text-center">
+              <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+              <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+            </div>
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
             </footer>
