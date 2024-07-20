@@ -373,6 +373,16 @@ const createPet = () => {
 };
 
 const updatePet = () => {
+  const targetCards = document.querySelector('.render-cards-here');
+  
+  targetCards.addEventListener('click', (e) => {
+    if(e.target.id.includes('edit')) {
+      const [ , id] = e.target.id.split('--');
+      const index = pets.findIndex(e => e.id === Number(id));
+
+      
+    }
+  });
 
 };
 
@@ -438,6 +448,7 @@ const petForm = document.querySelector('#pet-form');
 */
 renderPets(pets);
 deletePet();
+updatePet();
 /*
   ============== Event Listeners ==============
 */
