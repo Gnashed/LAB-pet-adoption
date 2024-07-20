@@ -264,7 +264,7 @@ const renderPets = (array) => {
     if (pet.type === 'cat' || pet.type === 'Cat') {
     domString += `
     <div class="row">
-      <div class="card container col px-1" style="width: 20rem">
+      <div class="card container col mx-4" style="width: 14rem">
         <div class="card-body">
           <header class="text-center">
             <h2 class="card-title">${pet.name}</h2>
@@ -290,7 +290,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dog' || pet.type === 'Dog') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
@@ -316,7 +316,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dino' || pet.type === 'Dino') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
