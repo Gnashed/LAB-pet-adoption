@@ -276,7 +276,7 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container">Delete</button>
+          <button class="container" id="delete-pet-card-btn">Delete</button>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -299,7 +299,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container">Delete</button>
+            <button class="container" id="delete-pet-card-btn">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -322,7 +322,7 @@ const renderPets = (array) => {
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-            <button class="container">Delete</button>
+            <button class="container" id="delete-pet-card-btn">Delete</button>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -365,8 +365,22 @@ const createPet = () => {
 };
 
 const deletePet = () => {
+  // Target the parant container of the elements you need to loop through.
+  const targetDiv = document.querySelector('.render-cards-here');
+  console.log(targetDiv);
+  // Target the chlld elements.
+  const targetChildren = document.getElementsByClassName('card');
+  console.log(targetChildren);
+  // Iterate through the child elements to check the properties to find the element we're looking for.
+  for (child in targetChildren) {
+    // findIndex, store in a variable
 
-}
+    // Compare the findIndex and the index number of the targeted child element.
+
+      // Delete the id that was matched from the array/data structure that contains that data.
+  };
+    
+};
 
 /*
   ============== Modal ==============
@@ -389,7 +403,7 @@ const closeModal = () => {
   overlay.classList.add("hidden");
 };
 /*
-  ============== Filter Buttons, Create Pet Button, form ==============
+  ============== Filter Buttons, Create/Delete Pet Button, form ==============
 */
 
 const catFilterButton = document.querySelector('.cat-filter');
@@ -404,6 +418,7 @@ const petForm = document.querySelector('#create-a-pet-form');
   ============== Function calls ==============
 */
 renderPets(pets);
+deletePet();
 /*
   ============== Event Listeners ==============
 */
@@ -422,7 +437,6 @@ allFilterButton.addEventListener('click', () => {
 });
 
 addAPetButton.addEventListener('click', () => {
-  console.log('addAPetButton click registered!');
   openModal();
 });
 createAPetButton.addEventListener('click', (e) => {
@@ -432,6 +446,7 @@ createAPetButton.addEventListener('click', (e) => {
   closeModal();
   renderPets(pets);
 });
+
 // FOR MODALS
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
