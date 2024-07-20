@@ -331,7 +331,7 @@ const renderPets = (array) => {
         </div> <!-- ./card -->
       </div>`;
     }
-    
+
   });
   renderToDom('.render-cards-here', domString);
 };
@@ -361,6 +361,7 @@ const createPet = () => {
 
   pets.push(pet);
   // console.log(pets)
+  const petForm = document.querySelector('#create-a-pet-form');
   renderPets(pets);
 };
 
@@ -388,7 +389,6 @@ const closeModal = () => {
 /*
   ============== Filter Buttons, Create/Delete Pet Button, form ==============
 */
-
 const catFilterButton = document.querySelector('.cat-filter');
 const dogFilterButton = document.querySelector('.dog-filter');
 const dinoFilterButton = document.querySelector('.dino-filter');
@@ -396,7 +396,6 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
-const petForm = document.querySelector('#create-a-pet-form');
 /*
   ============== Function calls ==============
 */
@@ -425,7 +424,6 @@ addAPetButton.addEventListener('click', () => {
 createAPetButton.addEventListener('click', (e) => {
   e.preventDefault();
   createPet();
-  petForm.reset();
   closeModal();
   renderPets(pets);
 });
