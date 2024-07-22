@@ -379,8 +379,7 @@ const updatePet = () => {
     if(e.target.id.includes('edit')) {
       const [ , id] = e.target.id.split('--');
       const index = pets.findIndex(e => e.id === Number(id));
-
-      
+      console.log(e.target.id);
     }
   });
 
