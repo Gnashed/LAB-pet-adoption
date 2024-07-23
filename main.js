@@ -481,6 +481,13 @@ addAPetButton.addEventListener('click', () => {
   openModal();
 });
 
+/*
+  TODO:
+  Might need to think of more efficient way to handle update/create requests. Right
+  now I have the createPet() function commented out so that the submit button invokes
+  the updatePet() function.
+
+*/
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   // createPet();
