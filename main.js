@@ -383,11 +383,15 @@ const updatePet = () => {
 
       // Render the form with the current data already filled.
       openModal();
-      document.querySelector('.pet-name').value = index.name;
-      document.querySelector('.pet-color').value = index.color;
-      document.querySelector('.pet-image').value = index.imageUrl;
-      document.querySelector('.pet-special-skill').value = index.specialSkill;
-      document.querySelector('.pet-type').value = index.type;
+      document.querySelector('.pet-name').value = pets[index].name;
+      document.querySelector('.pet-color').value = pets[index].color;
+      document.querySelector('.pet-image').value = pets[index].imageUrl;
+      document.querySelector('.pet-special-skill').value = pets[index].specialSkill;
+      document.querySelector('.pet-type').value = pets[index].type;
+
+      // Update the object in the pets array.
+
+      // Render the objects.
     }
   });
 };
