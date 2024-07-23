@@ -378,12 +378,18 @@ const updatePet = () => {
   targetCards.addEventListener('click', (e) => {
     if(e.target.id.includes('edit')) {
       const [ , id] = e.target.id.split('--');
-      const index = pets.findIndex(e => e.id === Number(id));
+      const index = pets.findIndex(pet => pet.id === Number(id));
+      console.log(e.target.id);
 
-      
+      // Render the form with the current data already filled.
+      openModal();
+      document.querySelector('.pet-name').value = index.name;
+      document.querySelector('.pet-color').value = index.color;
+      document.querySelector('.pet-image').value = index.imageUrl;
+      document.querySelector('.pet-special-skill').value = index.specialSkill;
+      document.querySelector('.pet-type').value = index.type;
     }
   });
-
 };
 
 const deletePet = () => {
@@ -447,6 +453,7 @@ const petForm = document.querySelector('#pet-form');
   ============== Function calls ==============
 */
 renderPets(pets);
+// createPet();
 deletePet();
 updatePet();
 /*
@@ -472,7 +479,8 @@ addAPetButton.addEventListener('click', () => {
 
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  createPet();
+  // createPet();
+  updatePet();
   closeModal();
   renderPets(pets);
 });
