@@ -367,7 +367,6 @@ const createPet = () => {
   };
 
   pets.push(pet);
-  // console.log(pets)
   petForm.reset();
   closeModal();
   renderPets(pets);
@@ -391,7 +390,7 @@ const updatePet = () => {
       document.querySelector('.pet-type').value = pets[index].type;
 
       // Update the object in the pets array.
-
+      
       // Render the objects.
     }
   });
@@ -454,13 +453,13 @@ const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
 const petForm = document.querySelector('#pet-form');
 
+const inputForSearchBox = document.querySelector('.search-input')
+
 /*
   ============== Function calls ==============
 */
 renderPets(pets);
-// createPet();
 deletePet();
-updatePet();
 /*
   ============== Event Listeners ==============
 */
@@ -482,16 +481,16 @@ addAPetButton.addEventListener('click', () => {
   openModal();
 });
 
-/*
-  TODO:
-  Might need to think of more efficient way to handle update/create requests. Right
-  now I have the createPet() function commented out so that the submit button invokes
-  the updatePet() function.
-
-*/
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   createPet();
+});
+
+inputForSearchBox.addEventListener('input', (e) => {
+  // Store the targeted input's value.
+  let value = e.target.value;
+  // Add some conditionals. Continue tutorial - https://dev.to/am20dipi/how-to-build-a-simple-search-bar-in-javascript-4onf
+
 });
 
 // FOR MODALS
