@@ -453,6 +453,8 @@ const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
 const petForm = document.querySelector('#pet-form');
 
+const inputForSearchBox = document.querySelector('.search-input')
+
 /*
   ============== Function calls ==============
 */
@@ -482,6 +484,13 @@ addAPetButton.addEventListener('click', () => {
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   createPet();
+});
+
+inputForSearchBox.addEventListener('input', (e) => {
+  // Store the targeted input's value.
+  let value = e.target.value;
+  // Add some conditionals. Continue tutorial - https://dev.to/am20dipi/how-to-build-a-simple-search-bar-in-javascript-4onf
+
 });
 
 // FOR MODALS
