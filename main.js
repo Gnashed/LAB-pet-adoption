@@ -369,6 +369,7 @@ const createPet = () => {
   pets.push(pet);
   // console.log(pets)
   petForm.reset();
+  closeModal();
   renderPets(pets);
 };
 
@@ -490,10 +491,7 @@ addAPetButton.addEventListener('click', () => {
 */
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  // createPet();
-  updatePet();
-  closeModal();
-  renderPets(pets);
+  createPet();
 });
 
 // FOR MODALS
