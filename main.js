@@ -264,7 +264,7 @@ const renderPets = (array) => {
     if (pet.type === 'cat' || pet.type === 'Cat') {
     domString += `
     <div class="row">
-      <div class="card container col px-1" style="width: 20rem">
+      <div class="card container col mx-4" style="width: 14rem">
         <div class="card-body">
           <header class="text-center">
             <h2 class="card-title">${pet.name}</h2>
@@ -276,7 +276,10 @@ const renderPets = (array) => {
 
           <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
 
-          <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
+          <div class="container text-center">
+            <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+            <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+          </div>
 
           <footer class="pet-card-footer mt-3 text-center" style="background-color: ${catColor}">
             <p style="font-weight: bold;">${pet.type}</p>
@@ -287,7 +290,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dog' || pet.type === 'Dog') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
@@ -298,8 +301,11 @@ const renderPets = (array) => {
             <h4 class="card-text mt-2">${pet.color}</h4>
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
-
-            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
+            
+            <div class="container text-center">
+              <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+              <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+            </div>
 
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dogColor}">
               <p style="font-weight: bold;">${pet.type}</p>
@@ -310,7 +316,7 @@ const renderPets = (array) => {
     } else if (pet.type === 'dino' || pet.type === 'Dino') {
       domString += `
       <div class="row">
-        <div class="card container col px-1" style="width: 20rem">
+        <div class="card container col mx-4" style="width: 14rem">
           <div class="card-body">
             <header class="text-center">
               <h2 class="card-title">${pet.name}</h2>
@@ -321,9 +327,10 @@ const renderPets = (array) => {
             <h4 class="card-text mt-2">${pet.color}</h4>
 
             <p class="card-text" style="height: 72px">${pet.specialSkill}</p>
-
-            <button class="container" id="delete-pet-card-btn--${pet.id}">Delete</button>
-
+            <div class="container text-center">
+              <button id="edit-pet-card-btn--${pet.id}">Edit</button>
+              <button id="delete-pet-card-btn--${pet.id}">Delete</button>
+            </div>
             <footer class="pet-card-footer mt-3 text-center" style="background-color: ${dinoColor}">
               <p style="font-weight: bold;">${pet.type}</p>
             </footer>
@@ -364,6 +371,30 @@ const createPet = () => {
   petForm.reset();
   closeModal();
   renderPets(pets);
+};
+
+const updatePet = () => {
+  const targetCards = document.querySelector('.render-cards-here');
+  
+  targetCards.addEventListener('click', (e) => {
+    if(e.target.id.includes('edit')) {
+      const [ , id] = e.target.id.split('--');
+      const index = pets.findIndex(pet => pet.id === Number(id));
+      console.log(e.target.id);
+
+      // Render the form with the current data already filled.
+      openModal();
+      document.querySelector('.pet-name').value = pets[index].name;
+      document.querySelector('.pet-color').value = pets[index].color;
+      document.querySelector('.pet-image').value = pets[index].imageUrl;
+      document.querySelector('.pet-special-skill').value = pets[index].specialSkill;
+      document.querySelector('.pet-type').value = pets[index].type;
+
+      // Update the object in the pets array.
+
+      // Render the objects.
+    }
+  });
 };
 
 const deletePet = () => {
@@ -421,13 +452,15 @@ const allFilterButton = document.querySelector('.all-filter');
 
 const addAPetButton = document.querySelector('.add-a-pet-btn');
 const createAPetButton = document.querySelector('.submit-btn'); // Inside the modal
-const petForm = document.querySelector('#create-a-pet-form');
+const petForm = document.querySelector('#pet-form');
 
 /*
   ============== Function calls ==============
 */
 renderPets(pets);
+// createPet();
 deletePet();
+updatePet();
 /*
   ============== Event Listeners ==============
 */
@@ -449,6 +482,13 @@ addAPetButton.addEventListener('click', () => {
   openModal();
 });
 
+/*
+  TODO:
+  Might need to think of more efficient way to handle update/create requests. Right
+  now I have the createPet() function commented out so that the submit button invokes
+  the updatePet() function.
+
+*/
 petForm.addEventListener('submit', (e) => {
   e.preventDefault();
   createPet();
