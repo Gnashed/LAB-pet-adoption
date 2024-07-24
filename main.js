@@ -251,7 +251,7 @@ const renderToDom = (divID, content) => {
 };
 
 /*
-  ============== Render Pets, filter/create/delete pets ==============
+  ============== Render Pets, filters, CRUD ==============
 */
 const renderPets = (array) => {
   let domString = "";
